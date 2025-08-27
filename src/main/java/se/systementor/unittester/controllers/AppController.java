@@ -9,6 +9,7 @@ import se.systementor.unittester.services.CalculatorService;
 
 @Controller
 public class AppController {
+
     @Autowired
     private CalculatorService calculatorService;
 
@@ -26,7 +27,7 @@ public class AppController {
         model.addAttribute("tal2", tal2);
         model.addAttribute("action", action);
 
-        int result = calculatorService.Calculate(Integer.parseInt(tal1),Integer.parseInt(tal2),action);
+        float result = calculatorService.Calculate(Integer.parseInt(tal1),Integer.parseInt(tal2),action);
         model.addAttribute("Result", result);
 
         return "home";

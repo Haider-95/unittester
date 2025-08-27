@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculatorService {
 
-    public int Calculate(int tal1, int tal2, String action) {
+    public float Calculate(float tal1, float tal2, String action) {
         if (action.equals("add")) {
             return tal1 + tal2;
         }
